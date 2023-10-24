@@ -1,6 +1,6 @@
 <?php
-
-if(isset($_POST['submit'])){
+session_start();
+if($_SESSION['permisos']==2){
 
     $ci=$_POST['ci'];
     $mail=$_POST['mail'];
@@ -17,6 +17,6 @@ if(isset($_POST['submit'])){
     $singup = new SingupContr($ci,$mail,$usuario,$pwd,$nombre,$apellido,$permisos);
     $singup->createUser();
 
-    header("location:../crearUsuarios.php");
-
+    $msg="success";
+    echo json_encode($msg);
 }

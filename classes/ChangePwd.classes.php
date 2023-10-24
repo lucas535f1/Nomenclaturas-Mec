@@ -1,5 +1,4 @@
 <?php
-
 class ChangePwd extends Db
 {
 
@@ -11,10 +10,11 @@ class ChangePwd extends Db
         $query->bindParam('pwd', $hashedPwd);
 
         if (!$query->execute()) {
-            header("location:../cambiarContrasena.php?noejecuta");
+            $msg="Error SQL";
+            echo json_encode($msg);
             exit();
         }
-        session_start();
+
         $_SESSION['pwdDefault'] = false;
     }
 }

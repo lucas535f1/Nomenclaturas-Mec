@@ -13,7 +13,8 @@ class LoginContr extends Login
     public function login()
     {
         if ($this->emptyInput()) {
-            header("location:../iniciarSesion.php?vacio");
+            $msg="Debe completar los campos";
+            echo json_encode($msg);
             exit();
         }
         $this->getUser($this->user,$this->pwd);

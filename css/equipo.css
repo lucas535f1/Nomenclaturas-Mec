@@ -1,0 +1,13 @@
+.dataContainer {
+    grid-template-rows: 63px 63px 63px 63px 63px 63px 63px 63px 63px;
+    grid-template-areas:
+        "id serie"
+        "telefono nombre"
+        "apellido usuario"
+        "nombrePC fecha"
+        "inventario sistema"
+        "tipo modelo"
+        "ue oficina"
+        "tecnico observaciones"
+        "baja boton";
+}

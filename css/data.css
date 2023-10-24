@@ -1,0 +1,85 @@
+
+
+.dataSection {
+    background-color: #5E96F7;
+    margin: calc(2%);
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+
+.dataContainer {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    width: 100%;
+}
+
+.dataContainer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(80% - 30px);
+    margin: 15px auto 15px auto;
+    border-bottom: black solid 1px;
+    padding: 0 5px;
+    background-color: white;
+    border-bottom: #097ABD solid 2px;
+    border-right: #097ABD solid 2px;
+    border-top: none;
+    border-left: none;
+    border-radius: 7px 0 20px 0;
+    transition: all 0.2s;
+    padding: 0 15px;
+}
+
+.dataContainer div:last-child{
+    justify-content: center !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.baja{
+    justify-content: center !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+a button:hover {
+    border-bottom: #002566 solid 2px;
+    border-right: #002566 solid 2px;
+    outline: none;
+    transform: scale(1.04);
+}
+
+a button {
+    padding: 0 10px 0 10px;
+    height: 30px;
+    font-size: 17px;
+    background-color: #097ABD;
+    border-bottom: #097ABD solid 2px;
+    border-right: #097ABD solid 2px;
+    border-top: none;
+    border-left: none;
+    border-radius: 7px 0 20px 0;
+    transition: all 0.2s;
+    width: 300px;
+}
+
+.baja button{
+    background-color: #da2222;
+    border-bottom: #da2222 solid 2px;
+    border-right: #da2222 solid 2px;
+}
+
+.baja button:hover{
+    border-bottom: #6e0000 solid 2px;
+    border-right: #6e0000 solid 2px;
+    outline: none;
+}

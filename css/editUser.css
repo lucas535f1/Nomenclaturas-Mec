@@ -1,0 +1,13 @@
+form {
+    grid-template-rows: 63px 63px 63px 63px 63px;
+    grid-template-areas:
+        "ci mail"
+        "usuario permisos"
+        "nombre apellido"
+        "check pass"
+        "l boton";
+}
+
+#pdwInput{
+    grid-area: check;
+}

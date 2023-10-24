@@ -1,0 +1,9 @@
+form {
+    grid-template-rows: 63px 63px 63px 63px 63px;
+    grid-template-areas:
+        "ci mail"
+        "usuario pass"
+        "nombre apellido"
+        "permisos k"
+        "l boton";
+}

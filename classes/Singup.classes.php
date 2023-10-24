@@ -1,5 +1,4 @@
 <?php
-
 class Singup extends db
 {
 
@@ -13,12 +12,14 @@ class Singup extends db
         $query->bindParam('usuario', $usuario);
 
         if (!$query->execute()) {
-            header("location:../crearUsuarios.php?noejecuta");
+            $msg="Error SQL 1";
+            echo json_encode($msg);
             exit();
         }
 
         if ($query->rowCount() > 0) {
-            header("location:../crearUsuarios.php?yaExiste");
+            $msg="Mail, CI y/o Usuario repetidos";
+            echo json_encode($msg);
             exit();
         }
 
@@ -33,12 +34,12 @@ class Singup extends db
         $add->bindParam('permisos', $permisos);
 
         if (!$add->execute()) {
-            header("location:../crearUsuarios.php?noejecuta");
+            $msg="Error SQL 2";
+            echo json_encode($msg);
             exit();
         }
 
         $evento = $this->conn()->prepare("INSERT INTO `Eventos`(`CiUsuario`, `titulo`, `descripcion`) VALUES (:ci,:titulo,:descripcion)");
-        session_start();
         $ciUser = $_SESSION['ci'];
         $titulo = "Creacion de usuario";
         $descripcion = "Se creo el usuario " . $usuario;
@@ -47,8 +48,10 @@ class Singup extends db
         $evento->bindParam('titulo', $titulo);
         $evento->bindParam('descripcion', $descripcion);
         if (!$evento->execute()) {
-            header("location:../crearUsuarios.php?noejecuta");
+            $msg="Error SQL 3";
+            echo json_encode($msg);
             exit();
         }
     }
+
 }

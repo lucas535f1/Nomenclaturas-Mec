@@ -1,0 +1,36 @@
+.encabezado {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: "sdf titulo baja";
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.bajaBoton {
+    width: 250px !important;
+}
+
+.coso {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    grid-area: baja;
+}
+
+.aBaja {
+    width: 250px;
+    margin: 0;
+    margin-right: 40px;
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}

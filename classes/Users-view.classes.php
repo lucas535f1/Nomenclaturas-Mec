@@ -1,5 +1,4 @@
 <?php
-
 class UsersView extends Users{
 
     public function fetchAllUsers(){

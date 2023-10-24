@@ -1,0 +1,17 @@
+.dataContainer {
+    grid-template-rows: 63px 63px 63px 63px 63px;
+    grid-template-areas:
+        "ci mail"
+        "usuario permisos"
+        "nombre apellido"
+        "fecha k"
+        "l boton"
+}
+
+
+td:last-child{
+    text-align: left !important;
+}
+.dt-button{
+    margin-right: 25px;
+}

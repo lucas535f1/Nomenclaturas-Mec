@@ -1,0 +1,10 @@
+.dataContainer {
+    grid-template-rows: 63px 63px 63px 63px;
+    grid-template-columns: 25% 25% 25% 25% !important;
+    grid-template-areas:
+        "a id id b"
+        "c ue ue d"
+        "c nombre nombre d"
+        "e nomenclatura nomenclatura f"
+        "baja baja boton boton";
+}

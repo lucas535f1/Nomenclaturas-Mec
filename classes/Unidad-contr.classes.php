@@ -19,11 +19,14 @@ class UnidadContr extends Unidad
             echo json_encode($msg);
             exit();
         }
-        if ($this->existe($this->numero,$this->nombre, $this->abreviatura)) {
-            $msg = "El numero, nombre y/o abreviatura ya existe";
+
+
+        if ($this->existe($this->numero, $this->nombre, $this->abreviatura)) {
+            $msg = "El numero, nombre y o abreviatura ya existe";
             echo json_encode($msg);
             exit();
         }
+
         $this->setUnidad($this->numero, $this->nombre, $this->abreviatura);
     }
 
@@ -35,4 +38,5 @@ class UnidadContr extends Unidad
         }
         return $result;
     }
+
 }

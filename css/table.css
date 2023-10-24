@@ -1,0 +1,144 @@
+body {
+    overflow-x: hidden;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    font-size: 0.95em !important;
+}
+
+
+td a {
+    color: blue;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+th {
+    background-color: #F7C65E;
+    text-align: center !important;
+}
+
+table {
+    border-collapse: collapse !important;
+    width: 95% !important;
+}
+
+.odd {
+    background-color: white !important;
+}
+
+.even {
+    background-color: rgb(187, 187, 187) !important;
+}
+
+.dataTables_wrapper {
+    background-color: #5E96F7;
+}
+
+.tableSection {
+    background-color: #5E96F7;
+    margin: calc(2%);
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#oficinasTable_filter input,
+#unidadesTable_filter input,
+#unidadesReq_filter input,
+#oficinasReq_filter input,
+#myTable_filter input {
+    appearance: none;
+    background-color: white;
+    height: 25px;
+    border-bottom: #097ABD solid 2px;
+    border-right: #097ABD solid 2px;
+    border-top: none;
+    border-left: none;
+    border-radius: 7px 0 20px 0;
+    transition: all 0.2s;
+    width: 250px;
+    padding-left: 5px;
+    margin-left: 12px;
+    margin-top: 0;
+}
+#oficinasTable_filter input::placeholder,
+#unidadesTable_filter input::placeholder,
+#unidadesReq_filter input::placeholder,
+#oficinasReq_filter input::placeholder,
+#myTable_filter input::placeholder {
+    color: rgb(71, 71, 71);
+
+}
+
+#oficinasTable_filter input:focus::placeholder,
+#unidadesTable_filter input:focus::placeholder,
+#unidadesReq_filter input:focus::placeholder,
+#oficinasReq_filter input:focus::placeholder,
+#myTable_filter input:focus::placeholder {
+    color: transparent;
+}
+#oficinasTable_filter input:focus,
+#unidadesTable_filter input:focus,
+#unidadesReq_filter input:focus,
+#oficinasReq_filter input:focus,
+#myTable_filter input:focus {
+    border-top: #a66f00a9 solid 2px;
+    border-left: #a66f00a9 solid 2px;
+    border-bottom: #002566 solid 2px;
+    border-right: #002566 solid 2px;
+    outline: none;
+    transform: scale(1.04);
+}
+#oficinasTable_filter
+#unidadesTable_filter,
+#unidadesReq_filter,
+#oficinasReq_filter,
+#myTable_filter {
+    margin-bottom: 15px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-rows: 25.5px;
+}
+
+.dt-buttons {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.dt-buttons button:hover {
+    border-bottom: #002566 solid 2px;
+    border-right: #002566 solid 2px;
+    outline: none;
+    transform: scale(1.04);
+}
+
+.dt-buttons button {
+    padding: 0 10px 0 10px;
+    height: 30px;
+    font-size: 17px;
+    background-color: #097ABD;
+    border-bottom: #097ABD solid 2px;
+    border-right: #097ABD solid 2px;
+    border-top: none;
+    border-left: none;
+    border-radius: 7px 0 20px 0;
+    transition: all 0.2s;
+    width: 100px;
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+
+td:last-child {
+    text-align: center;
+}

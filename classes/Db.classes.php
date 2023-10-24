@@ -1,9 +1,13 @@
 <?php
-
 class Db
 {
-    private $server = "172.24.3.9";
-    private $username = "admin";
+    // private $server = "localhost";
+    // private $username = "root";
+    // private $password = "";
+    // private $db = "gestor";
+
+    private $server = "equipos.mec.local";
+    private $username = "admin-mec";
     private $password = "S3rT3cMEC";
     private $db = "gestor";
 

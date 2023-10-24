@@ -1,5 +1,4 @@
 <?php
-
 class EventsView extends Events
 {
     public function fetchUserEvents($ci)

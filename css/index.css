@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #0059F2;
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 49s ease infinite;
+    -moz-animation: AnimationName 49s ease infinite;
+    animation: AnimationName 49s ease infinite;
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:87% 0%}
+    50%{background-position:14% 100%}
+    100%{background-position:87% 0%}
+}
+
+article {
+    position: absolute;
+    top: 90px;
+    width: 100vw;
+    /* height: calc(100vh - 90px); */
+    display: flex;
+    justify-content: center; 
+} 
+
+section {
+    /* background-color: white; */
+    background-color:#5E96F7;
+    width: 65%;
+    margin: calc(2%);
+    border-radius: 13px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 230px 230px 230px;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    margin: auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.item a{ 
+    color: black;
+    font-size: 30px;
+    width: 400px;
+    display: inline-block;  
+    /* background-color: #bd8409; */
+    background-color: white;
+    border-bottom: #097ABD solid 4px;
+    border-right: #097ABD solid 4px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-radius: 9px 0 25px 0;
+    transition: all 0.07s;
+}
+
+.item a:hover{
+    border-top: #a66f00a9 solid 4px;
+    border-left: #a66f00a9 solid 4px;
+    border-bottom: #002566 solid 4px;
+    border-right: #002566 solid 4px;
+    transform: scale(1.03);
+}
+
+.icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.icon {
+    transform: scale(2);
+    margin-bottom: 3px;
+}

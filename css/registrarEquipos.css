@@ -1,0 +1,14 @@
+
+
+form {
+    grid-template-rows: 63px 63px 63px 63px 63px 63px 63px;
+    grid-template-areas:
+        "serie inventario"
+        "nombre apellido"
+        "usuario telefono"
+        "modelo observaciones "
+        "sistema soText"
+        "unidad oficina"
+        "equipo nombreEquipo"
+        "l boton";
+}

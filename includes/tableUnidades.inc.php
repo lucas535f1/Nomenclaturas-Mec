@@ -1,24 +1,30 @@
 <?php
-require_once "./classes/Db.classes.php";
-require_once "./classes/Unidad.classes.php";
-require_once "./classes/Unidad-view.classes.php";
+require_once "../classes/Db.classes.php";
+require_once "../classes/Unidad.classes.php";
+require_once "../classes/Unidad-view.classes.php";
 
 $unidadView = new UnidadView();
 $unidades = $unidadView->fetchAll();
 ?>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Abreviatura</th>
-        <th>Nombre</th>
-    </tr>
-    <?php
-    foreach ($unidades as $unidad) {
-    ?>
+<table id="unidadesTable">
+    <thead>
         <tr>
-            <td><?= $unidad['ID'] ?></td>
-            <td><?= $unidad['Nomenclatura'] ?></td>
-            <td><?= $unidad['Nombre'] ?></td>
+            <th>ID</th>
+            <th>Abreviatura</th>
+            <th>Nombre</th>
+            <th>Ver</th>
         </tr>
-    <?php } ?>
+    </thead>
+    <tbody>
+        <?php
+        foreach ($unidades as $unidad) {
+        ?>
+            <tr>
+                <td><?= $unidad['ID'] ?></td>
+                <td><?= $unidad['Nomenclatura'] ?></td>
+                <td><?= $unidad['Nombre'] ?></td>
+                <td><a href="./unidadEjecutora.php?id=<?= $unidad['ID'] ?>">Ver</a></td>
+            </tr>
+        <?php } ?>
+    </tbody>
 </table>

@@ -1,21 +1,18 @@
 <?php
+$usuario = $_POST['usuario'];
+$pwd = $_POST['pwd'];
 
-if (isset($_POST['submit'])) {
+require "../classes/Db.classes.php";
+require "../classes/Login.classes.php";
+require "../classes/Login-contr.classes.php";
+$login = new LoginContr($usuario, $pwd);
 
-    $usuario = $_POST['usuario'];
-    $pwd = $_POST['pwd'];
-
-    require "../classes/Db.classes.php";
-    require "../classes/Login.classes.php";
-    require "../classes/Login-contr.classes.php";
-    $login = new LoginContr($usuario, $pwd);
-
-    $login->login();
+$login->login();
 
 
-    if ($_SESSION['pwdDefault']) {
-        header('Location: ../cambiarContrasena.php');
-    } else {
-        header("location:../");
-    }
+if ($_SESSION['pwdDefault']) {
+    $msg = "changePwd";
+} else {
+    $msg = "success";
 }
+echo json_encode($msg);

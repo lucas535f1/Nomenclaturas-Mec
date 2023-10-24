@@ -1,5 +1,4 @@
 <?php
-
 class Events extends Db
 {
 
@@ -20,7 +19,7 @@ class Events extends Db
 
     protected function getAllEvents()
     {
-        $query = $this->conn()->prepare("SELECT Tecnico.Usuario, Eventos.CiUsuario, Eventos.Descripcion, Eventos.Fecha, Eventos.ID, Eventos.Titulo FROM Tecnico  INNER JOIN Eventos ON Eventos.CiUsuario=Tecnico.CI;");
+        $query = $this->conn()->prepare("SELECT Tecnico.Usuario, Eventos.CiUsuario, Eventos.Descripcion, Eventos.Fecha, Eventos.ID, Eventos.Titulo FROM Tecnico  INNER JOIN Eventos ON Eventos.CiUsuario=Tecnico.CI ORDER BY fecha DESC");
 
         if (!$query->execute()) {
             header("location:../eventos.php?noejecuta");

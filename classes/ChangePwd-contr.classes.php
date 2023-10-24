@@ -16,12 +16,14 @@ class ChangePwdContr extends ChangePwd
     public function changePwd()
     {
         if ($this->emptyInput()) {
-            header("location:../cambiarContrasena.php?vacio");
+            $msg="Debe completar los campos";
+            echo json_encode($msg);
             exit();
         }
 
         if ($this->differentPwd()) {
-            header("location:../cambiarContrasena.php?diferente");
+            $msg="Las contraseñas son distintas";
+            echo json_encode($msg);
             exit();
         }
         $this->change($this->pwd,$this->ci);

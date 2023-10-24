@@ -1,5 +1,4 @@
 <?php
-
 class   Login extends db{
 
     protected function getUser ($user,$pwd){
@@ -7,19 +6,28 @@ class   Login extends db{
         $query->bindParam('user', $user);
 
         if(!$query->execute()){
-            header("location:../iniciarSesion.php?noejecuta");
+            $msg="Error SQL";
+            echo json_encode($msg);
             exit();
         }
 
         $userArray = $query->fetch(PDO::FETCH_ASSOC);
 
         if($query->rowCount()==0){
-            header("location:../iniciarSesion.php?noexiste");
+            $msg="El usuario no existe";
+            echo json_encode($msg);
             exit();
         }
         
         if(!password_verify($pwd,$userArray['Pass'])){
-            header("location:../iniciarSesion.php?contrasenamal");
+            $msg="Contraseña incorrecta";
+            echo json_encode($msg);
+            exit();
+        }
+
+        if($userArray['Permisos']==0){
+            $msg="Usuario Deshabilitado";
+            echo json_encode($msg);
             exit();
         }
 

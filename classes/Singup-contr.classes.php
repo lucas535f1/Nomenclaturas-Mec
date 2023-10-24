@@ -23,7 +23,8 @@ class SingupContr extends Singup
     public function createUser()
     {
         if ($this->emptyInput()) {
-            header("location:../crearUsuarios.php?vacio");
+            $msg = "Debe completar los campos";
+            echo json_encode($msg);
             exit();
         }
 
