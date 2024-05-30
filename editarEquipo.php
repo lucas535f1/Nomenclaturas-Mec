@@ -131,7 +131,7 @@ $ue = $equipo['ueID'] . "|" . $equipo['ueNomenclatura'];
                     <select equipo="<?= $equipo['TipoEquipo'] ?>" id="selectEquipo" onchange="actualizarNombreEquipo()">
                         <option value="PC" selected>PC</option>
                         <option value="NOT">Notebook</option>
-                        <option value="PRT">Impresora</option>
+                        <option value="IMP">Impresora</option>
                     </select>
                 </div>
                 <div style="grid-area: nombreEquipo;">

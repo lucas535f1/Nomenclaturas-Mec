@@ -123,7 +123,7 @@ header('Content-Type: text/html; charset=UTF-8');
                         <select id="selectEquipo" onchange="actualizarNombreEquipo()">
                             <option value="PC" selected>PC</option>
                             <option value="NOT">Notebook</option>
-                            <option value="PRT">Impresora</option>
+                            <option value="IMP">Impresora</option>
                         </select>
                         <i></i>
                     </aside>
